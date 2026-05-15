@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Showcase</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="ambient" aria-hidden="true"></div>
+
+  <main class="shell">
+    <div class="glass" role="presentation">
+      <header class="top">
+        <button type="button" class="back" id="backBtn" aria-label="Geri dön" hidden>
+          <span class="back__glyph" aria-hidden="true"></span>
+          <span class="back__label">Back</span>
+        </button>
+        <div class="search-wrap" id="searchWrap">
+          <label class="search" for="q">
+            <span class="search__icon" aria-hidden="true"></span>
+            <input id="q" type="search" placeholder="Ara" autocomplete="off" spellcheck="false" />
+          </label>
+        </div>
+      </header>
+
+      <div class="stage">
+        <div class="view view--grid is-active" id="viewGrid" aria-live="polite">
+          <div class="grid" id="sectorGrid"></div>
+        </div>
+        <div class="view view--detail" id="viewDetail" hidden aria-live="polite">
+          <div class="detail-head">
+            <h1 class="detail-title" id="detailTitle"></h1>
+          </div>
+          <div class="demos" id="demoList"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="https://unpkg.com/lucide@0.454.0/dist/umd/lucide.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
